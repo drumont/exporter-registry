@@ -1,0 +1,12 @@
+---
+version: "3"
+
+services:
+
+  nginx:
+    image: nginx:1.22
+    ports:
+      - "8080:8080"
+      - "8180:80"
+    volumes:
+      - ./nginx/status.conf:/etc/nginx/conf.d/status.conf:ro
